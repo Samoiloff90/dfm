@@ -1,0 +1,130 @@
+.section-offers
+  padding-top: 15px
+  padding-bottom: 41px
+
+.special-offers
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &__title
+    font-size: 30px
+    color: $dark4
+    margin-bottom: 26px
+    text-transform: uppercase
+    +light
+
+.offers-wrap
+.offer
+  padding: 5px 5px 5px 9px
+  background-color: $white
+  max-width: 768px
+  display: flex
+  margin-bottom: 15px
+  &__img
+    width: 240px
+    height: 180px
+  &__content
+    padding: 28px 30px 36px 50px
+    color: $gray5
+  &__title
+    text-transform: uppercase
+    font-size: 18px
+    margin-bottom: 27px
+    +semibold
+  &__text
+    line-height: 1.3
+    font-size: 18px
+    +light
+  &__text strong
+    color: $main-active
+    margin-left: 5px
+    +semibold
+
+// aside
+
+.news-block
+  &__title
+    font-size: 30px
+    color: $dark4
+    margin-bottom: 9px
+    line-height: 1.3
+    text-transform: uppercase
+    +light
+
+.news
+  max-width: 318px
+  margin-bottom: 18px
+  &:last-child
+    margin-bottom: 0
+  &__time
+    font-size: 18px
+    color: $main-active
+    line-height: 2.1
+    +semibold
+  &__title
+    color: $gray6
+    font-size: 18px
+    line-height: 1.6
+    +semibold
+  &__text
+    color: $gray6
+    font-size: 14px
+    line-height: 2.2
+    margin-bottom: 8px
+    +reg
+  &__links
+    display: flex
+    justify-content: flex-end
+    padding-right: 7px
+  &__link
+    color: $gray6
+    font-size: 14px
+    position: relative
+    +light
+    
+    &::after
+      content: ""
+      position: absolute
+      height: 1px
+      width: 100%
+      background-color: $gray6
+      right: 0
+      bottom: 1px
+    &_all
+      margin-right: 14px
+
+@media (max-width: 1230px)
+  .special-offers
+    &-wrap
+      flex-direction: column
+    &__title
+      text-align: center
+  .offers-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+  .offer__content
+    padding: 1.6rem
+  .news-block__title
+    text-align: center
+  .news-wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  .offer
+    min-width: 300px
+    width: 32%
+    margin-bottom: 2rem
+    flex-direction: column
+    align-items: center
+
+
+@media (max-width: 900px)
+  .offer
+    padding: 8px
+    &__content
+      text-align: center
+
+@media (max-width: 740px)
+  .news-wrap
+    justify-content: center

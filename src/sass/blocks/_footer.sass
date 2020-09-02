@@ -1,0 +1,58 @@
+.footer
+  padding: 18px 0px 26px 0px
+  background-color: $dark
+  color: $light3
+
+.footer-contacts
+  display: flex
+  justify-content: flex-end
+  position: relative
+  margin-bottom: 40px
+  &__item
+    margin-right: 42px
+    &:first-child
+      margin-right: 64px
+    &:last-child
+      margin-right: 0
+  &__link
+    color: $light3
+    font-size: 14px
+    +light
+  &::after
+    content: ""
+    height: 1px
+    width: 110%
+    position: absolute
+    top: 27px
+    right: -8px
+    background-color: $gray7
+    max-width: 418px
+
+.under-info
+  display: flex
+  justify-content: space-between
+  &-reserved
+    font-size: 14px
+    color: $light3
+    +light
+
+.made-info
+  &__link
+    font-style: normal
+    font-size: 14px
+    color: $light3
+    +light
+    span
+      color: $active2
+
+@media (max-width: 500px)
+  .footer-contacts
+    flex-direction: column
+    &::after
+      top: 27px
+      right: 0px
+      top: 130%
+      width: 100%
+  .under-info
+    flex-direction: column
+

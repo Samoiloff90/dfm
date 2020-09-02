@@ -1,0 +1,83 @@
+main
+  background-color: $gray4
+.main
+  padding-bottom: 22px
+
+// slider 
+.slider-wrap
+  position: relative
+  width: 100%
+  overflow: hidden
+
+.slider
+  position: relative
+  overflow: hidden
+  height: 459px
+  &__img
+    position: absolute
+    top: -10%
+    width: auto
+    &_none
+      display: none
+  &-content
+    width: 256px
+    height: 458px
+    margin: 0 60px 0px auto
+    color: $light2
+    padding: 54px 35px 58px 34px
+    // background-image: url(../img/slider/bg.svg), url(../img/slider/slider-logo.png)
+    // background-repeat: no-repeat, no-repeat
+    // background-position: 0px -54px, 23px 138px
+    // background-size: 256px 512px, auto
+    background-image: url(../img/slider/logo1.png)
+    background-repeat: no-repeat
+    background-position: 0px -53px
+    position: relative
+    &__title
+      font-size: 16px
+      margin-bottom: 26px
+      letter-spacing: -0.35px
+      +reg
+    &__list
+      font-size: 14px
+    &__item
+      line-height: 2.2
+      +reg
+      &:last-child
+        margin-bottom: 0
+    &__button
+      position: absolute
+      left: -23px
+      top: 35px
+      border-radius: 50%
+      width: 47px
+      height: 47px
+      background-color: $main-active
+      border: none
+
+
+// // //      
+.slider-points
+  position: absolute
+  height: 52px
+  width: 100%
+  background-color: $dark3
+  bottom: 0
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  padding: 25px 73px 17px 0px
+  &__point
+    width: 11px
+    height: 10px
+    background-color: $white
+    margin-right: 8px
+    cursor: pointer
+    &_active
+      background-color: $main-active
+
+
+@media (max-width: 900px)
+  .main > .container
+    width: 100%
+    padding: 0px

@@ -1,0 +1,115 @@
+.header
+  padding: 27px 0px 0px 0px 
+  background-color: $white
+.top-hat
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+
+.logo
+  margin-right: 50px
+.brand
+  display: flex
+  align-items: center
+  &__name
+    text-transform: uppercase
+    font-size: 30px
+    margin: 0
+    line-height: 0.73
+    +light
+    &_russia
+      display: block
+      color: $main-active
+      line-height: 2.1
+      margin-left: 3px
+
+
+// // //
+.contacts-menu
+  display: flex
+  align-self: flex-start
+  justify-content: flex-end
+
+.social-networks
+  display: flex
+  margin-right: 60px
+  align-items: center
+
+.contacts-list 
+  display: flex
+  align-items: center
+  margin: 0
+  padding: 0
+  font-size: 14px
+  position: relative
+  +light
+  &__item
+    margin-right: 23px
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      width: 1px
+      height: 16px
+      background-color: $gray3
+      top: 7px
+      left: 38%
+    &:last-child
+      margin-right: 0
+      &::after
+        display: none
+  &__link
+    text-decoration: none
+    color: $gray2
+  
+// nav
+
+.nav
+  background-color: $dark
+  min-height: 50px
+
+.navigation
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  &__item
+    padding: 15px 17px 15px 17px
+    &:hover
+      transition: all 0.4s ease
+      background-color: $active1
+  &__link
+    color: $light1
+    font-size: 20px
+    +light
+    
+
+// media
+@media (max-width: 1230px)
+  .brand__name
+    font-size: 2vw
+  .navigation
+    &__link
+      font-size: 16px
+
+@media (max-width: 900px)
+  .top-hat 
+    flex-direction: column
+  .brand
+    flex-direction: column
+    &__name
+      text-align: center
+  .brand__name
+    font-size: 3vw
+  .logo
+    margin-right: 0
+    margin-bottom: 10px
+  .contacts-menu
+    text-align: center
+    align-self: center
+  .social-networks
+    margin-right: 23px
+
+@media (max-width: 900px)
+  .navigation
+    flex-direction: column

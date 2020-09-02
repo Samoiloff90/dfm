@@ -1,0 +1,51 @@
+*
+  box-sizing: border-box
+ul
+  list-style-type: none
+a
+  text-decoration: none
+
+button, 
+button:active, 
+button:focus
+  outline: none
+  
+button, a
+  cursor: pointer
+  
+h1, h2, h3, h4, p, ul
+  padding: 0
+  margin: 0
+
+body
+  +reg
+img
+  max-width: 100%
+.container
+  width: 1211px
+  margin: 0 auto
+
+// social
+.social
+  text-decoration: none
+  color: $white
+  margin-right: 11px
+  font-size: 14px
+  cursor: pointer
+  +semibold
+  &_round
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    background-color: $social
+    width: 28px
+    height: 28px
+  &:last-child
+    margin-right: 0
+
+@media (max-width: 1230px)
+  .container
+    width: 90%
+    padding: 0px 15px
+

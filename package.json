@@ -1,0 +1,28 @@
+{
+  "name": "repair",
+  "version": "1.0.0",
+  "description": "website for the apartment renovation company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samoiloff90/repair.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samoiloff90/repair/issues"
+  },
+  "homepage": "https://github.com/Samoiloff90/repair#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-tinypng-compress": "^1.2.5"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
+  }
+}
