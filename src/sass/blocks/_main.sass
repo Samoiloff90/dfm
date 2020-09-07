@@ -13,12 +13,14 @@ main
   position: relative
   overflow: hidden
   height: 459px
+  &__slides
+    display: none
+    &_active
+      display: block
   &__img
+    width: 100%
     position: absolute
     top: -10%
-    width: auto
-    &_none
-      display: none
   &-content
     width: 256px
     height: 458px

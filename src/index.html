@@ -117,8 +117,12 @@
       <div class="container">
         <div class="slider-wrap">
           <div class="slider">
-            <img src="img/slider/main-car.jpg" alt="" class="slider__img">
-            <img src="img/slider/car.jpg" alt="" class="slider__img">
+            <div class="slider__slides slider__slides_active">
+              <img src="img/slider/main-car.jpg" alt="" class="slider__img slider__img_active">
+            </div>
+            <div class="slider__slides">
+              <img src="img/slider/car.jpg" alt="" class="slider__img">
+            </div>
             <div class="slider-content">
               <button class="slider-content__button">
                 <img src="img/slider/arrow.png" alt="arrow" class="slider-content__button-img">
@@ -143,8 +147,8 @@
             </div>
           </div>
           <div class="slider-points">
-            <div class="slider-points__point slider-points__point_active"></div>
-            <div class="slider-points__point"></div>
+            <div class="slider-points__point slider-points__point_active" id="one"></div>
+            <div class="slider-points__point" id="two"></div>
           </div>
         </div>
       </div>

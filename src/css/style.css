@@ -636,14 +636,18 @@ main {
   height: 459px;
 }
 
-.slider__img {
-  position: absolute;
-  top: -10%;
-  width: auto;
+.slider__slides {
+  display: none;
 }
 
-.slider__img_none {
-  display: none;
+.slider__slides_active {
+  display: block;
+}
+
+.slider__img {
+  width: 100%;
+  position: absolute;
+  top: -10%;
 }
 
 .slider-content {
