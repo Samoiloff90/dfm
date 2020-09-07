@@ -1,31 +1,44 @@
 window.addEventListener('DOMContentLoaded', function () {
-  const slides = document.querySelectorAll('.slider__img'),
-    next = document.querySelector('.slider-content__button');
-  let slideIndex = 1;
+  const next = document.querySelector('.slider-content__button'),
+        slides = document.querySelectorAll('.slider__slides'),
+        dots = document.querySelectorAll('.slider-points__point');
+  let index = 0;
 
-  
-  showSlides(slideIndex);
-
-  function showSlides(n) {
-    if (n > slides.length) {
-      slideIndex = 1;
+  const activeSlide = n => {
+    for(slide of slides) {
+      slide.classList.remove('slider__slides_active');
     }
+    slides[n].classList.add('slider__slides_active');
+  };
 
-    if (n < 1) {
-      slideIndex = slides.length;
+  const activeDot = n => {
+    for (dot of dots) {
+      dot.classList.remove('slider-points__point_active');
     }
+    dots[n].classList.add('slider-points__point_active');
+  };
 
-    slides.forEach(item => item.style.display = 'none');
+  const prepareCurrentSlide = ind => {
+    activeSlide(ind);
+    activeDot(ind);
+  };
 
+  const nextSlide = () => {
+    if (index == slides.length - 1) {
+      index = 0;
+      prepareCurrentSlide(index);
+    } else {
+      index++;
+      prepareCurrentSlide(index);
+    }
+  };
 
-    slides[slideIndex - 1].style.display = 'block';
-  }
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  next.addEventListener('click', () => {
-    plusSlides(+1);
+  dots.forEach((item, indexDot) => {
+    item.addEventListener('click', () => {
+      index = indexDot;
+      prepareCurrentSlide(index);
+    });
   });
+
+  next.addEventListener('click', nextSlide);
 });
